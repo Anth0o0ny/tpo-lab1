@@ -35,4 +35,15 @@ public class AirTest {
         assertEquals(this.air.getSmells(), Smell.SOOT);
     }
 
+    @Test
+    public void getSmellTest() {
+        air.setSmells(Smell.SMOLDER);
+        assertEquals(Smell.SMOLDER, air.getSmells());
+    }
+
+    @Test
+    public void setLocationTest() {
+        air.setLocation(location);
+        assertEquals(location, air.getLocation());
+    }
 }

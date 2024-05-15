@@ -10,4 +10,9 @@ public enum Smell {
         this.title = title;
     }
 
+    @Override
+    public String toString() {
+        return title;
+    }
+
 }
