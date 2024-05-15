@@ -11,8 +11,5 @@ public enum Gender {
         this.title = title;
     }
 
-    public String getTitle() {
-        return title;
-    }
 
 }

@@ -10,9 +10,6 @@ public class Air extends Location{
 
     public Air() {}
 
-    public Air(Location location) {
-        this.location = location;
-    }
 
     public Smell getSmells() {
         return smells;
@@ -22,9 +19,6 @@ public class Air extends Location{
         this.smells = smells;
     }
 
-    public Location getLocation() {
-        return location;
-    }
 
     public void setLocation(Location location) {
         this.location = location;

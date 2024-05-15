@@ -11,7 +11,4 @@ public enum HumanCondition {
         this.title = title;
     }
 
-    public String getTitle() {
-        return title;
-    }
 }

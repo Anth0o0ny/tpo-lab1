@@ -10,7 +10,4 @@ public enum Smell {
         this.title = title;
     }
 
-    public String getTitle() {
-        return title;
-    }
 }
