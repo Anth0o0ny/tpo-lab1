@@ -21,7 +21,6 @@ public class HumanTest {
     @Test
     public void changeInnerConditionTest() {
         human.changeInnerCondition(HumanCondition.FEAR);
-
         assertEquals(human.getInnerCondition(), HumanCondition.FEAR);
     }
 

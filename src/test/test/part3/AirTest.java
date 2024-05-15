@@ -1,11 +1,11 @@
 package part3;
 
+import org.junit.jupiter.api.BeforeEach;
 import part3.abstractClasses.Human;
 import part3.abstractClasses.Location;
 import part3.entities.Air;
 import part3.enums.Smell;
 import part3.entities.Tunnel;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ public class AirTest {
 
     private List<Human> visitors;
 
-    @Before
+    @BeforeEach
     public void preparationTunnelLocationAndNoVisitors() {
         this.visitors = new ArrayList<>();
         this.location = new Tunnel(visitors);
