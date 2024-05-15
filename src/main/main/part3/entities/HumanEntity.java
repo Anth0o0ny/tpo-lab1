@@ -78,7 +78,9 @@
 package part3.entities;
 
 import part3.abstractClasses.Human;
+import part3.abstractClasses.Location;
 import part3.enums.Gender;
+import part3.enums.HumanCondition;
 
 public class HumanEntity extends Human {
     private Flashlight flashlight = new Flashlight(false);
@@ -89,14 +91,23 @@ public class HumanEntity extends Human {
 
     @Override
     public boolean illuminate() {
+        Flashlight flashlight = getFlashlight();
         if (!flashlight.getCondition()) {
             flashlight.switchOn();
         }
+        return flashlight.getCondition();
+    }
 
-        if (flashlight.getCondition()) {
-            return true;
+    public void updateConditionBasedOnLocationAndFlashlight() {
+        Location currentLocation = getCurrentLocation();
+        if (currentLocation instanceof Tunnel) {
+            if (getFlashlight().getCondition()) {
+                changeInnerCondition(HumanCondition.NERVOUS);
+            } else {
+                changeInnerCondition(HumanCondition.FEAR);
+            }
         } else {
-            return false;
+            changeInnerCondition(HumanCondition.BRAVE);
         }
     }
 }
